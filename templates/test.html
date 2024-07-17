@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+	    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/Button_Download.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='CSS/arrow_back.css')}}">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100&display=swap" rel="stylesheet">
+		<!-- <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/minecraftia" type="text/css"/> -->
+
+<head>
+	<title>ผลลัพธ์การคาดการณ์อายุคนจากภาพเอกซเรย์พาโนรามา</title>
+	<style>
+		h1 {
+			font-family:'Prompt', sans-serif;;
+		}
+		table {
+			font-family:'Prompt', sans-serif;;
+			border-collapse: collapse;
+			width: 60%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		td, th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+
+	</style>
+</head>
+<body>
+	<div class= "zone">
+		<button type = "button" class="btn btn--purple" onclick="history.back()">
+		  <span class="btn__txt">Back</span>
+	   </button></div>
+	<center><h1>ผลลัพธ์การคาดการณ์อายุคนจากภาพเอกซเรย์พาโนรามาของฟัน</h1></center>
+	<table>
+	{{ table|safe }}
+	<div class="container">
+		<a href="{{ url_for('download_file')}}" class="button">
+		  <div class="button__line"></div>
+		  <div class="button__line"></div>
+		  <span class="button__text">Download</span>
+		  <div class="button__drow1"></div>
+		  <div class="button__drow2"></div>
+		</a>
+	  </div>
+	</table>
+
+	</body>
+
+</html>
+
+
+
+
